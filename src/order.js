@@ -24,16 +24,21 @@ function listItems(order){
   return orders.join(', ');
 }
 
-// function listItems(order){
-//   for ( i = 0; i < order.length; i++){
-//   return order[i].item
-//   }
-// }
+
+
+function searchOrder(searching, item){
+  for ( i = 0; i < searching.length; i++){
+    if (searching[i].item === item){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 module.exports = {
 takeOrder,
 refundOrder,
 listItems,
-// searchOrder
+searchOrder
 }
